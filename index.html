@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <!--============== Start Navbar =============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <img src="images/logo.png" alt="" />
+        <a class="navbar-brand"> Weather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#search">Search</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#mobileApp">Mobile App</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#subscribe">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#37AEC3"
+        fill-opacity="1"
+        d="M0,64L120,80C240,96,480,128,720,122.7C960,117,1200,75,1320,53.3L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+      ></path>
+    </svg>
+    <!--============== End  Navbar =============================-->
+
+    <!--============== Start Section About =============================-->
+    <main id="about">
+      <section class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="weather-caption">
+              <h2>Weather App</h2>
+              <p>
+                Having an up to date information about the weather helps us to
+                take well-read decisions. These weather apps constantly update
+                the forecasts for a day or hour or sometimes for even a minute.
+                These can be simply termed as the compact weather devices, as
+                they do not only tell about the temperature of that specific
+                region instead they can describe the accurate time of the
+                sunrise and sunset, the time of the rainfall, humidity levels,
+                etc.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="rain-image img-fluid">
+              <img src="images/raining-animate-1.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--============== End Section About =============================-->
+
+    <!--============== Start Section Search =============================-->
+    <input
+      class="form-control m-auto rounded-pill mb-5"
+      type="search"
+      name="search"
+      id="search"
+      placeholder="Search by city ..."
+    />
+    <!--============== Start Section Search =============================-->
+
+    <!--============== Start Section card =============================-->
+    <main class="container mt-5">
+      <section class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <!-- Today Card -->
+            <div
+              class="card-header d-flex justify-content-between align-items-center bg-dark text-white"
+            >
+              <p id="today"></p>
+              <p id="today-date"></p>
+            </div>
+            <div class="card-body">
+              <h5 id="location" class="card-title"></h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <p id="today-degree" class="card-text"></p>
+                <img id="today-icon" src="" alt="" width="90px" />
+              </div>
+              <p id="today-description" class="text-dark">sunny</p>
+              <i class="fa-solid fa-umbrella"></i>
+              <span id="humidity"> </span>
+
+              <i class="fa-solid fa-wind"></i>
+              <span id="wind"> 11.2 <span>km / h </span></span>
+
+              <i class="fa-solid fa-compass"></i>
+              <span id="compass"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Day Card -->
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div
+              class="card-header d-flex justify-content-between align-items-center bg-dark text-white"
+            >
+              <p class="next-day"></p>
+              <p class="next-day-date"></p>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center flex-column">
+                <img src="" alt="" class="next-day-icon" width="100px" />
+                <p class="card-text max-degree"></p>
+                <p class="min-degree"></p>
+                <p class="text-dark next-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div
+              class="card-header d-flex justify-content-between align-items-center bg-dark text-white"
+            >
+              <p class="next-day"></p>
+              <p class="next-day-date">26 March</p>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center flex-column">
+                <img src="" alt="" class="next-day-icon" width="100px" />
+                <p class="card-text max-degree">22<sup>o</sup>C</p>
+                <p class="min-degree">17<sup>o</sup>C</p>
+                <p class="text-dark next-description">sunny</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--============== End Section card =============================-->
+
+    <!--============== Start Section Mobile App =============================-->
+    <main class="container mt-5 mb-5" id="mobileApp">
+      <section class="row align-items-center">
+        <div class="col-md-6">
+          <figure>
+            <img src="images/download.png" alt="" class="w-75" />
+          </figure>
+        </div>
+
+        <div class="col-md-6">
+          <div class="mobile-app text-center">
+            <h2>Mobile App</h2>
+            <p>
+              This weather app is one of best free weather apps with full
+              features: Local weather weather map (weather map service) and
+              weather widgets.
+            </p>
+
+            <button class="btn rounded-pill p-2 me-4">Download Android</button>
+            <button class="btn rounded-pill p-2">Download ios</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--============== End Section Mobile App =============================-->
+
+    <!--============== Start Section Subscribe =============================-->
+    <main class="container mt-5 mb-5" id="subscribe">
+      <section class="row">
+        <div class="col-md-6">
+          <div class="sub-content text-center">
+            <h2>Subscribe</h2>
+            <p>Get daily weather updates, quotes & more..</p>
+            <input
+              class="form-control rounded-pill"
+              type="search"
+              name=""
+              id="search-sub"
+              placeholder="Enter Your Email To Subscribe ..."
+            />
+            <button class="btn mt-5 rounded-pill p-2">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <figure>
+            <img src="images/subscribe.png" alt="" class="w-50" />
+          </figure>
+        </div>
+      </section>
+    </main>
+    <!--============== End Section Subscribe =============================-->
+
+    <!--============== Start Section Footer =============================-->
+    <footer class="bg-dark text-center text-white p-3 mt-5">
+      <p>Copyright &copy; 2021 Designed by Weather App. All rights reserved</p>
+
+      <section class="footer-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-google-plus"></i>
+      </section>
+    </footer>
+    <!--============== End Section Footer =============================-->
+
+    <!--============== Start Back To Top =============================-->
+    <section class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </section>
+    <!--============== End Back To Top =============================-->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

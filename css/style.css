@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #37AEC3;
+}
+
+/* =========== nav bar ============ */
+a {
+    margin: 0px 15px;
+    color: #fff !important;
+}
+
+.navbar {
+    background-color: var(--main-color);
+
+}
+
+.navbar img[src="images/logo.png"] {
+    width: 60px;
+}
+
+.nav-item a:focus,
+.nav-item a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* =========== End nav bar ============ */
+
+/* =======  Start section about ============ */
+.weather-caption h2 {
+    color: var(--main-color);
+}
+
+.weather-caption p {
+    color: #455A64;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+
+/* =======  End section about ============ */
+
+#search {
+    border: 2px solid var(--main-color);
+    width: 40%;
+}
+
+@media (max-width:700px) {
+    #search {
+
+        width: 70%;
+    }
+}
+
+/* =======  Start section card ============ */
+.card {
+    border: none;
+    height: 400px;
+}
+
+.card-header {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+.card-body {
+    background-color: var(--main-color);
+    color: white;
+    transition: all 0.7s;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.card-text {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.card-body:hover {
+    background-color: #1c7281;
+}
+
+
+/* =======  End section card ============ */
+
+/* ==============Start Section Mobile App============================= */
+.mobile-app p,
+.sub-content p {
+    line-height: 40px;
+    color: #455A64;
+}
+
+.mobile-app h2,
+.sub-content h2 {
+    color: var(--main-color);
+}
+
+.mobile-app button,
+.sub-content button {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    transition: all 0.5s;
+}
+
+.mobile-app button:hover,
+.sub-content button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* ==============End Section Mobile App============================= */
+
+
+/* ==============Start Section Footer============================= */
+
+.footer-icons i {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0px 10px;
+}
+
+.footer-icons i:hover {
+    color: var(--main-color);
+}
+
+/* ==============End Section Footer============================= */
+
+
+/* Start Back To Top */
+.to-top {
+    position: fixed;
+    z-index: 1234;
+    bottom: 30px;
+    right: 10px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+/* End Back To Top */
