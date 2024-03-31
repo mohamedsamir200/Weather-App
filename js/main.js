@@ -12,7 +12,7 @@ let humidity = document.getElementById("humidity");
 let wind = document.getElementById("wind");
 let compass = document.getElementById("compass");
 let searchBar = document.getElementById("search");
-let currentCity = "cairo"
+let currentCity = "cairo";
 
 // =============  Next Day Card ===========================//
 
@@ -28,8 +28,8 @@ let dataResponse;
 
 
 //=============== Get Data From Api =========================
-let months = ["jan", "feb", "march", "april", "may", "june", "july", "aug", "sept", "oct", "nov", "des"];
-let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+let months = ["Jan", "Jeb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 async function getData() {
     let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=848e4c9efef048e494f100521210205&q=${currentCity}&days=3&aqi=no&alerts=no`);
@@ -63,7 +63,7 @@ function displayNextDay() {
         let dayObj = dataResponse.forecast.forecastday[i + 1].day;
 
         nextDay[i].innerHTML = days[new Date(dataObj).getDay()];
-        nextDatDate[i].innerHTML = `${date.getDate() + i + 1} ${months[date.getMonth()]}`;
+        nextDatDate[i].innerHTML = `${new Date(dataObj).getDate()} ${months[new Date(dataObj).getMonth()]}`;
         nextDayIcon[i].setAttribute("src", `https:${dayObj.condition.icon}`);
         maxDegree[i].innerHTML = `${dayObj.maxtemp_c}<sup>&deg;</sup>C`;
         minDegree[i].innerHTML = `${dayObj.mintemp_c}<sup>&deg;</sup>C`;
@@ -74,7 +74,7 @@ function displayNextDay() {
 //=============== Real Time Search ========================= //
 
 searchBar.addEventListener("input", () => {
-    currentCity =searchBar.value; 
+    currentCity = searchBar.value;
     getData();
 });
 
